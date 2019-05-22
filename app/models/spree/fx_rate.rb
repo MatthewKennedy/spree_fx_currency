@@ -16,7 +16,7 @@ module Spree
     end
 
     def self.supported_currencies
-      Spree::Config.supported_currencies.split(', ')
+      Spree::Config.supported_currencies.split(',')
                    .reject { |c| spree_currency.to_s == c.upcase }
     rescue NoMethodError => _e
       []
